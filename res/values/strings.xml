@@ -4,5 +4,8 @@
     <string name="app_name">BaseConverter</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="string_button_convert">Convert</string>
+    <string name="string_to_base">To base:</string>
+    <string name="string_from_base">From base:</string>
 
 </resources>

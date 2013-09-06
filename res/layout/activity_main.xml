@@ -17,7 +17,7 @@
         android:orientation="vertical" >
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextValue"
             android:layout_width="271dp"
             android:layout_height="wrap_content"
             android:inputType="text" >
@@ -29,7 +29,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="From base:"
+            android:text="@string/string_from_base"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <RadioGroup
@@ -39,26 +39,26 @@
             android:orientation="horizontal" >
 
             <RadioButton
-                android:id="@+id/radio0"
+                android:id="@+id/radioFromBase2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="(2)" />
 
             <RadioButton
-                android:id="@+id/radio1"
+                android:id="@+id/radioFromBase8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(8)" />
 
             <RadioButton
-                android:id="@+id/radio2"
+                android:id="@+id/radioFromBase10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(10)" />
 
             <RadioButton
-                android:id="@+id/radioButton1"
+                android:id="@+id/radioFromBase16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(16)" />
@@ -68,7 +68,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To base:"
+            android:text="@string/string_to_base"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <RadioGroup
@@ -78,26 +78,25 @@
             android:orientation="horizontal" >
 
             <RadioButton
-                android:id="@+id/radio0"
+                android:id="@+id/radioToBase2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="(2)" />
 
             <RadioButton
-                android:id="@+id/radio1"
+                android:id="@+id/radioToBase8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(8)" />
 
             <RadioButton
-                android:id="@+id/radio2"
+                android:id="@+id/radioToBase10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(10)" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioToBase16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="(16)" />
@@ -105,13 +104,13 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/buttonConvert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Convert" />
+            android:text="@string/string_button_convert" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textViewResult"
             android:layout_width="match_parent"
             android:layout_height="209dp"
             android:textAppearance="?android:attr/textAppearanceLarge" />
