@@ -2,43 +2,67 @@ package fabio.converter.baseconverter;
 
 public class Converter {
 	
-	public String decimalToBinary(int number) {
-		return this.decimalToBaseN(number, 2);
+	// Convert decimal to binary
+	public long decimalToBinary(long number) {
+		if(number < 2)
+			return number;
+		else
+			return this.decimalToBaseN(number, 2);
 	}
 	
-	public String decimalToOctal(int number) {
-		return this.decimalToBaseN(number, 8);
+	// Convert decimal to octal
+	public long decimalToOctal(long number) {
+		if(number < 8)
+			return number;
+		else
+			return this.decimalToBaseN(number, 8);
 	}
 	
-	public String decimalToHex(int number) {
+	// Convert decimal to hexadecimal
+	public String decimalToHex(long number) {
 		String result = new String();
 		int remainder;
 		
-		while(number > 0) {
-			remainder = number%16;
+		if( number < 9 )
+			return Long.toString(number);
+		else {
+			while(number > 0) {
+				remainder = (int)(number%16);
 			
-			result += this.numberValueInHex(remainder);
-			number /=  16;
-		}
+				result += this.numberValueInHex(remainder);
+				number /=  16;
+			}
 		
-		return this.reverseString(result);
+			return this.reverseString(result);
+		}
 	}
 	
-	public int binaryToDecimal(int number) {
-		String value = new String(Integer.toString(number));
+	// Convert binary to decimal
+	public long binaryToDecimal(long number) {
+		return this.baseNToDecimal(number, 2);
+	}
+	
+	// Convert octal to decimal
+	public long octalToDecimal(long number) {
+		return this.baseNToDecimal(number, 8);
+	}
+	
+	// Convert hexadecimal to decimal
+	public long hexToDecimal(String value) {
 		value = this.reverseString(value);
-		
-		int result = 0;
+		long result = 0;
+		int number;
 		
 		for(int i = 0; i < value.length(); i++) {
-			result += Character.getNumericValue(value.charAt(i)) * Math.pow(2, i);
+			number = this.hexCharValueInNumber(value.charAt(i));
+			result += number * Math.pow(16, i);
 		}
 		
 		return result;
 	}
 	
 	
-	
+	// Reverse a string
 	private String reverseString(String value) {
 		String result = new String();
 		
@@ -48,20 +72,34 @@ public class Converter {
 		return result;
 	}
 	
-	private String decimalToBaseN(int decimalNumber, int base) {
-		if(base < 2)
-			return "-1";
+	// Convert N base to decimal
+	private long baseNToDecimal(long number, int base) {
+		String value = new String(Long.toString(number));
+		value = this.reverseString(value);
 		
+		long result = 0;
+		
+		for(int i = 0; i < value.length(); i++) {
+			result += Character.getNumericValue(value.charAt(i)) * Math.pow(base, i);
+		}
+		
+		return result;
+	}
+	
+	// Convert decimal to N base up to 10
+	private int decimalToBaseN(long decimalNumber, int base) {
 		String result = new String();
 		
 		while(decimalNumber > 0) {
-			result += Integer.toString(decimalNumber%base);
+			result += Long.toString(decimalNumber%base);
 			decimalNumber /=  base;
 		}
+		result = this.reverseString(result);
 		
-		return this.reverseString(result);
+		return Integer.valueOf(result);
 	}
 	
+	// Get the hexadecimal of a number
 	private String numberValueInHex(int number) {
 		String result = "";
 		
@@ -77,6 +115,25 @@ public class Converter {
 				case 13: result = "D"; break;
 				case 14: result = "E"; break;
 				case 15: result = "F"; break;
+			}
+		
+		return result;
+	}
+	
+	// Get the number value of a hexadecimal character value
+	private int hexCharValueInNumber(char value) {
+		int result = 0;
+		
+		if( Character.isDigit(value) )
+			result = Character.getNumericValue(value);
+		else
+			switch(value) {
+				case 'A': result = 10; break;
+				case 'B': result = 11; break;
+				case 'C': result = 12; break;
+				case 'D': result = 13; break;
+				case 'E': result = 14; break;
+				case 'F': result = 15; break;
 			}
 		
 		return result;
