@@ -55,6 +55,7 @@
                 android:id="@+id/radioFromBase10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="(10)" />
 
             <RadioButton
@@ -81,6 +82,7 @@
                 android:id="@+id/radioToBase2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:text="(2)" />
 
             <RadioButton
