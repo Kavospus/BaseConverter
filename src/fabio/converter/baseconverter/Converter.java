@@ -111,11 +111,17 @@ public class Converter {
         else
             switch(value) {
                 case 'A': result = 10; break;
+                case 'a': result = 10; break;
                 case 'B': result = 11; break;
+                case 'b': result = 11; break;
                 case 'C': result = 12; break;
+                case 'c': result = 12; break;
                 case 'D': result = 13; break;
+                case 'd': result = 13; break;
                 case 'E': result = 14; break;
+                case 'e': result = 14; break;
                 case 'F': result = 15; break;
+                case 'f': result = 15; break;
             }
 
         return result;
