@@ -11,8 +11,8 @@ public final class R {
     public static final class attr {
     }
     public static final class dimen {
-        /**  From: file:/C:/Users/Andre/AndroidStudioProjects/Git/Clone/BaseConverter/res/values/dimens.xml 
- From: file:/C:/Users/Andre/AndroidStudioProjects/Git/Clone/BaseConverter/res/values-sw720dp-land/dimens.xml 
+        /**  From: file:/C:/Users/Andre/AndroidStudioProjects/Git/BaseConverter/res/values/dimens.xml 
+ From: file:/C:/Users/Andre/AndroidStudioProjects/Git/BaseConverter/res/values-sw720dp-land/dimens.xml 
          */
         public static final int activity_horizontal_margin=0x7f040000;
         public static final int activity_vertical_margin=0x7f040001;
@@ -46,7 +46,7 @@ public final class R {
         public static final int main=0x7f070000;
     }
     public static final class string {
-        /**  From: file:/C:/Users/Andre/AndroidStudioProjects/Git/Clone/BaseConverter/res/values/strings.xml 
+        /**  From: file:/C:/Users/Andre/AndroidStudioProjects/Git/BaseConverter/res/values/strings.xml 
          */
         public static final int action_settings=0x7f050000;
         public static final int app_name=0x7f050001;
@@ -56,7 +56,7 @@ public final class R {
         public static final int string_to_base=0x7f050005;
     }
     public static final class style {
-        /**  From: file:/C:/Users/Andre/AndroidStudioProjects/Git/Clone/BaseConverter/res/values/styles.xml 
+        /**  From: file:/C:/Users/Andre/AndroidStudioProjects/Git/BaseConverter/res/values/styles.xml 
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
