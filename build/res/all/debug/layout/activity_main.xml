@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/editTextValue"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_from_base"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioFromBase2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="(2)" />
+
+            <RadioButton
+                android:id="@+id/radioFromBase8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(8)" />
+
+            <RadioButton
+                android:id="@+id/radioFromBase10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="(10)" />
+
+            <RadioButton
+                android:id="@+id/radioFromBase16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(16)" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_to_base"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioToBase2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="(2)" />
+
+            <RadioButton
+                android:id="@+id/radioToBase8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(8)" />
+
+            <RadioButton
+                android:id="@+id/radioToBase10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(10)" />
+
+            <RadioButton
+                android:id="@+id/radioToBase16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(16)" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonConvert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/string_button_convert" />
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="209dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/Andre/AndroidStudioProjects/Git/Clone/BaseConverter/res/layout/activity_main.xml -->
