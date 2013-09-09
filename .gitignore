@@ -6,3 +6,4 @@
 *.so
 *.apk
 bin/*
+build/*
